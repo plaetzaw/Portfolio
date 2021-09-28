@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/molecules/Navbar'
+import AboutMe from '../components/organisms/AboutMe'
 import Hero from '../components/organisms/Hero'
 
 export default function Home () {
@@ -14,6 +15,7 @@ export default function Home () {
       <main>
         <Navbar />
         <Hero />
+        <AboutMe />
       </main>
 
       {/* <footer className='flex items-center justify-center w-full h-24 border-t'>
