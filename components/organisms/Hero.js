@@ -9,15 +9,15 @@ const Hero = () => {
 
   }
   return (
-    <div className='bg-[#5F3C92] flex flex-col items-center justify-center text-center md:flex-row'>
-      <div className='py-4 md:w-1/2'>
+    <div className='bg-[#5F3C92] min-h-3/4 flex flex-col items-center justify-center text-center md:flex-row'>
+      <div className='py-4 md:w-1/4'>
         <Image
           src='/AlexHS.png'
           width={200}
           height={200}
         />
       </div>
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center md:w-3/4'>
         <span className='text-[#F2EFEF] pb-2 text-5xl'>Hi, my name is</span>
         <span className='text-[#FF7A00] text-4xl'>ALEX PLAETZER</span>
         <div className='animate-pulse'><Check /></div>

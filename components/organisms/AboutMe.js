@@ -22,8 +22,8 @@ const AboutMe = () => {
 
   const QPanel = QArray.map((item, index) => {
     return (
-      <div key={index} className='none min-text-left p-3 md:p-6 flex flex-row'>
-        <span className='text-[#5F3C92]  text-3xl md:w-1/2 text-4xl'>{item.Question}</span>
+      <div key={index} className='min-text-left px-4 py-6 md:p-6 flex flex-row'>
+        <p className='text-[#5F3C92] text-3xl md:w-1/2 text-4xl'>{item.Question}</p>
         <p className='text-[#241F36] text-xl md:w-1/2 text-2xl'>{item.Answer}</p>
       </div>
 
