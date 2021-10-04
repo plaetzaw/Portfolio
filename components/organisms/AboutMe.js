@@ -34,7 +34,7 @@ const AboutMe = () => {
     )
   })
   return (
-    <div className='bg-[#F2EFEF]'>
+    <div className='bg-[#F2EFEF]' id='#section-about'>
       {QPanel}
     </div>
   )

@@ -7,21 +7,30 @@ const Navbar = (props) => {
   }
   const closeMobileView = () => { props.setMobileNav(false) }
 
+  const Links = [
+    {
+      item: 'About',
+      url: '/about'
+
+    }
+  ]
   // const OpenText = props.isOpen ? 'Open' : 'Closed'
 
   console.log(props.isOpen)
   return (
-    <div className='flex flex-row p-4 bg-[#5F3C92] w-100'>
-      <div className='md:hidden' onClick={() => handleClick(!props.isOpen)}>
+    <div className='flex flex-col p-4 bg-[#5F3C92] w-100'>
+      <div className='pb-3 md:hidden' onClick={() => handleClick(!props.isOpen)}>
         {props.isOpen ? <Close /> : <Hamburger />}
       </div>
-      <div>
-        <ul className={`flex ${props.isOpen ? 'flex-col' : 'hidden'} md:flex flex-row`}>
-          <li className='w-100 bg-pink-500'>About</li>
-          <li className='w-100 bg-pink-500'>Projects</li>
-          <li className='w-100 bg-pink-500'>Technologies</li>
-          <li className='w-100 bg-pink-500'>Contact</li>
-          <li className='w-100 bg-pink-500'>Blog</li>
+      <div className={`${props.isOpen ? 'h-screen' : 'auto'} `}>
+        <ul className={`flex ${props.isOpen ? 'flex-col' : 'hidden'} gap-1 text-center md:flex flex-row justify-between`}>
+          <li className='text-4xl py-5 bg-pink-500 md:text-xl py-2' onClick={closeMobileView}>
+            <a href='/#section-about'>About</a>
+          </li>
+          <li className='text-4xl py-5 bg-pink-500 md:text-xl py-2' onClick={closeMobileView}>Projects</li>
+          <li className='text-4xl py-5 bg-pink-500 md:text-xl py-2' onClick={closeMobileView}>Technologies</li>
+          <li className='text-4xl py-5 bg-pink-500 md:text-xl py-2' onClick={closeMobileView}>Contact</li>
+          <li className='text-4xl py-5 bg-pink-500 md:text-xl py-2' onClick={closeMobileView}>Blog</li>
         </ul>
       </div>
     </div>
