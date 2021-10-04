@@ -5,11 +5,8 @@ import LinkedIn from '../atoms/LinkedIn'
 import Medium from '../atoms/Medium'
 
 const Hero = () => {
-  const Navigate = () => {
-
-  }
   return (
-    <div className='bg-[#5F3C92] min-h-3/4 flex flex-col items-center justify-center text-center md:flex-row'>
+    <div className='bg-[#5F3C92] pb-8 min-h-3/4 flex flex-col items-center justify-center text-center md:flex-row'>
       <div className='py-4 md:w-1/4'>
         <Image
           src='/AlexHS.png'
