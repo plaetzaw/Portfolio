@@ -23,7 +23,7 @@ const Navbar = (props) => {
         {props.isOpen ? <Close /> : <Hamburger />}
       </div>
       <div className={`${props.isOpen ? 'h-screen' : 'auto'} `}>
-        <ul className={`flex ${props.isOpen ? 'flex-col' : 'hidden'} gap-1 text-center md:flex flex-row justify-between`}>
+        <ul className={`flex ${props.isOpen ? 'flex-col' : 'hidden'} gap-1 text-center md:flex flex-row justify-evenly`}>
           <li className='text-4xl py-5 bg-pink-500 md:text-xl py-2' onClick={closeMobileView}>
             <a href='/#section-about'>About</a>
           </li>

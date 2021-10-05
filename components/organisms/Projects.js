@@ -10,7 +10,8 @@ const Projects = () => {
       description: 'GameBargins is a NextJS App which allows a user to search for video game discounts and set-up price alerts. The app can search over 20 PC gaming stores to find you the best deals. This app is powered by the Cheapshark API',
       website: 'https://gamebargins.netlify.app/',
       feURL: 'https://github.com/plaetzaw/GameBargins-Client',
-      beURL: 'https://github.com/plaetzaw/GameBargins-Server'
+      beURL: 'https://github.com/plaetzaw/GameBargins-Server',
+      type: 'NextJS'
     },
     {
       src: '/bingewatch 1.png',
@@ -18,7 +19,8 @@ const Projects = () => {
       description: 'YourNextBinge is CRA App to help users find their next title to bingewatch. Users can search for a specific title or search for a particular actor/actress. The app will also make recommendations of similar titles. This app is powered by the Open Movie Database API.',
       website: 'https://yournextbinge.netlify.app/',
       feURL: 'https://github.com/plaetzaw/YourNextBinge-Client',
-      beURL: 'https://github.com/plaetzaw/YourNextBinge-Server'
+      beURL: 'https://github.com/plaetzaw/YourNextBinge-Server',
+      type: 'CRA'
     }
   ]
 
@@ -33,13 +35,13 @@ const Projects = () => {
           <div className='pb-2 md: pr-4'><Image src={project.src} height={275} width={275} /></div>
           <div className='flex flex-row justify-center text-left text-[#F2EFEF] text-sm pb-2 px-5'>
             <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.website) }}><Website />
-              <span>Deployed</span>
+              <span>App</span>
             </div>
             <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.feURL) }}><Github />
-              <span>Front-End</span>
+              <span>{project.type}</span>
             </div>
             <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.beURL) }}><Github />
-              <span>Back-End</span>
+              <span>Express</span>
             </div>
           </div>
         </div>

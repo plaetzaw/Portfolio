@@ -6,6 +6,8 @@ import Navbar from '../components/molecules/Navbar'
 import AboutMe from '../components/organisms/AboutMe'
 import Hero from '../components/organisms/Hero'
 import Projects from '../components/organisms/Projects'
+import Technologies from '../components/organisms/Technologies'
+import Contact from '../components/organisms/Contact'
 
 export default function Home () {
   const [mobileNavOpen, setMobileNav] = useState(false)
@@ -40,6 +42,8 @@ export default function Home () {
           <Hero />
           <AboutMe />
           <Projects />
+          <Technologies />
+          {/* <Contact /> */}
         </div>
       </main>
 
