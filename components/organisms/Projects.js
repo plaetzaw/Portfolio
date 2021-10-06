@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Github from '../atoms/GitHub'
 import Website from '../atoms/Website'
 
-const Projects = () => {
+const Projects = (props) => {
   const ProjArray = [
     {
       src: '/PCGame 1.png',
@@ -30,9 +30,9 @@ const Projects = () => {
 
   const ProjDisplay = ProjArray.map((project, index) => {
     return (
-      <div key={index} className='px-4 py-8 flex flex-col justify-center md:flex-row'>
+      <div key={index} className='flex flex-col justify-center px-4 py-8 md:flex-row'>
         <div className='md:w-1/3'>
-          <div className='pb-2 md: pr-4'><Image src={project.src} height={275} width={275} /></div>
+          <div className='pb-2 pr-4 md:'><Image src={project.src} height={275} width={275} /></div>
           <div className='flex flex-row justify-center text-left text-[#F2EFEF] text-sm pb-2 px-5'>
             <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.website) }}><Website />
               <span>App</span>
@@ -45,7 +45,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className='md:w-2/3 pr-6 flex-col'>
+        <div className='flex-col pr-6 md:w-2/3'>
           <span className='text-[#F2EFEF] m-2 text-3xl leading-10'>{project.title}</span>
           <p className='text-[#707097] m-2 text-2xl leading-10'>{project.description}</p>
         </div>
@@ -53,7 +53,7 @@ const Projects = () => {
     )
   })
   return (
-    <div className='bg-[#241F36] px-4 py-8 text-center'>
+    <div className='bg-[#241F36] px-4 py-8 text-center' ref={props.position}>
       <span className='text-[#F2EFEF] text-4xl text-center md:text-left'>My Projects</span>
       {ProjDisplay}
     </div>

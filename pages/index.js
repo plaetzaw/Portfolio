@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 import Head from 'next/head'
 import Navbar from '../components/molecules/Navbar'
@@ -28,6 +28,27 @@ export default function Home () {
     return () => window.removeEventListener('resize', handleResize)
   }, []) // Empty array ensures that effect is only run on mount
 
+  const aboutRef = useRef(null)
+  const projectsRef = useRef(null)
+  const technologiesRef = useRef(null)
+  const contactRef = useRef(null)
+
+  // const scrollTo = (ref) => {
+  //   ref.current.scrollIntoView({ behavior: 'smooth' })
+  // }
+
+  const executeScroll = (ref) => {
+    console.log('check the ref', ref)
+    contactRef.current.scrollIntoView()
+  }
+
+  const refSet = {
+    about: aboutRef,
+    projects: projectsRef,
+    technologies: technologiesRef,
+    contact: contactRef
+
+  }
   return (
     // <div className='flex flex-col items-center justify-center min-h-screen py-2'>
     <div className='bg-[#5F3C92]'>
@@ -37,13 +58,17 @@ export default function Home () {
       </Head>
 
       <main>
-        <Navbar setMobileNav={setMobileNav} isOpen={mobileNavOpen} />
+        <Navbar setMobileNav={setMobileNav} isOpen={mobileNavOpen} executeScroll={executeScroll} refSet={refSet} />
         <div className={`${mobileNavOpen ? 'hidden' : 'block'}`}>
           <Hero />
-          <AboutMe />
-          <Projects />
-          <Technologies />
-          <Contact />
+          <AboutMe position={aboutRef} />
+          <Projects position={projectsRef} />
+          <Technologies position={technologiesRef} />
+          <Contact position={contactRef} />
+          <div>
+            I wanna scroll to some elements
+            <button className='bg-indigo-100' onClick={executeScroll}>Show me About</button>
+          </div>
         </div>
       </main>
 

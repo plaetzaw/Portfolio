@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Contact = () => {
+const Contact = (props) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -108,13 +108,13 @@ const Contact = () => {
 
   const Success = (
     <div className='flex flex-col text-center'>
-      <h1 className='text-5xl text-blue-600 p-4'>Success!</h1>
-      <p className='text-xl rounded-xl text-white p-4'>Your message has been submitted. I will get back to you in a timely manner. Thank you for reaching out!</p>
+      <h1 className='p-4 text-5xl text-blue-600'>Success!</h1>
+      <p className='p-4 text-xl text-white rounded-xl'>Your message has been submitted. I will get back to you in a timely manner. Thank you for reaching out!</p>
     </div>
   )
 
   return (
-    <div className='py-4 bg-[#241F36]'>
+    <div className='py-4 bg-[#241F36]' ref={props.position}>
       {submitted ? Success : Form}
     </div>
   )
