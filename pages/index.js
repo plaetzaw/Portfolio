@@ -30,7 +30,7 @@ export default function Home () {
 
   return (
     // <div className='flex flex-col items-center justify-center min-h-screen py-2'>
-    <div className='bg-[#035263]'>
+    <div className='bg-[#5F3C92]'>
       <Head>
         <title>Alex Plaetzer Portfolio</title>
         <link rel='icon' href='/AlexHS.png' />
@@ -43,7 +43,7 @@ export default function Home () {
           <AboutMe />
           <Projects />
           <Technologies />
-          {/* <Contact /> */}
+          <Contact />
         </div>
       </main>
 

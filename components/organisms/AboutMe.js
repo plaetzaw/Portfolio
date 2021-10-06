@@ -18,10 +18,6 @@ const AboutMe = () => {
       Question: 'Am I open to relocation?',
       Answer: 'No, I am not open to relocation at this time.'
     }
-    // {
-    //   Question: 'What technologies do you work with?',
-    //   Answer: 'React & NextJS, TailwindCSS & Styled-Components, KnexJS, SequelizeJS & PostgreSQL, Git, GraphQL, Heroku'
-    // }
   ]
 
   const QPanel = QArray.map((item, index) => {
