@@ -34,7 +34,7 @@ const Contact = (props) => {
     }
     // Checking to see if the input values are valid, if so
     // it will initiate the fetch request
-    console.log(nameError, '&&', emailError, '&&', messageError)
+    // console.log(nameError, '&&', emailError, '&&', messageError)
     if (nameError === false && emailError === false && messageError === false) {
       try {
         await window.fetch('/', {
@@ -76,7 +76,7 @@ const Contact = (props) => {
           type='text'
           name='name'
           value={name}
-          invalidField={invalidName}
+          invalidfield={invalidName.toString()}
           placeholder='Your name'
           onChange={(e) => { setName(e.target.value) }}
           className={`border-8 w-4/5 my-2' ${invalidName ? 'border-red-700' : ''}`}
@@ -86,7 +86,7 @@ const Contact = (props) => {
           type='text'
           name='email'
           value={email}
-          invalidField={invalidEmail}
+          invalidfield={invalidEmail.toString()}
           placeholder='Your email'
           onChange={(e) => { setEmail(e.target.value) }}
           className={`border-8 w-4/5 my-2' ${invalidEmail ? 'border-red-700' : ''}`}
@@ -96,12 +96,12 @@ const Contact = (props) => {
           type='textarea'
           name='message'
           value={message}
-          invalidField={invalidMessage}
+          invalidfield={invalidMessage.toString()}
           placeholder='Your message'
           onChange={(e) => { setMessage(e.target.value) }}
           className={`border-8 w-4/5 my-2 py-4 ${invalidMessage ? 'border-red-700' : ''} `}
         />
-        <button className='bg-[#5F3C92] text-2xl w-1/4 border-white border-4 rounded' onClick={onClick}>Send!</button>
+        <button className='bg-[#5F3C92] text-2xl w-1/4 border-4 rounded hover:bg-red-700 hover:border-white' onClick={onClick}>Send!</button>
       </form>
     </>
   )

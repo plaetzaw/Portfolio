@@ -1,7 +1,6 @@
 import React from 'react'
 
 const AboutMe = (props) => {
-  console.log(props)
   const QArray = [
     {
       Question: 'Where do I work?',
@@ -24,8 +23,8 @@ const AboutMe = (props) => {
   const QPanel = QArray.map((item, index) => {
     return (
       <div key={index} className='flex-row py-4 min-text-left md:flex'>
-        <p className='text-[#5F3C92] text-3xl md:w-1/2 text-4xl'>{item.Question}</p>
-        <p className='text-[#241F36] text-xl md:w-1/2 text-2xl'>{item.Answer}</p>
+        <p className='text-[#5F3C92] text-3xl md:w-1/2 md:text-4xl'>{item.Question}</p>
+        <p className='text-[#241F36] text-xl md:w-1/2 md:text-2xl'>{item.Answer}</p>
       </div>
 
     )
