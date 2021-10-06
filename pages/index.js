@@ -34,12 +34,13 @@ export default function Home () {
   const contactRef = useRef(null)
 
   // const scrollTo = (ref) => {
-  //   ref.current.scrollIntoView({ behavior: 'smooth' })
+  //   ref.current.scrollIntoView({ behavio r: 'smooth' })
   // }
 
   const executeScroll = (ref) => {
     console.log('check the ref', ref)
-    contactRef.current.scrollIntoView()
+    ref.current.scrollIntoView()
+    // contactRef.current.scrollIntoView()
   }
 
   const refSet = {
@@ -47,8 +48,8 @@ export default function Home () {
     projects: projectsRef,
     technologies: technologiesRef,
     contact: contactRef
-
   }
+
   return (
     // <div className='flex flex-col items-center justify-center min-h-screen py-2'>
     <div className='bg-[#5F3C92]'>
@@ -65,10 +66,6 @@ export default function Home () {
           <Projects position={projectsRef} />
           <Technologies position={technologiesRef} />
           <Contact position={contactRef} />
-          <div>
-            I wanna scroll to some elements
-            <button className='bg-indigo-100' onClick={executeScroll}>Show me About</button>
-          </div>
         </div>
       </main>
 
