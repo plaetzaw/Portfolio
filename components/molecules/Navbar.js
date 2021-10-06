@@ -6,9 +6,7 @@ const Navbar = (props) => {
     props.setMobileNav(!props.isOpen)
   }
   const closeMobileView = async (location) => {
-    console.log('you are going here', location)
     await props.setMobileNav(false)
-    // console.log(props.refSet)
     props.executeScroll(location)
   }
 

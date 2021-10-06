@@ -114,7 +114,7 @@ const Contact = (props) => {
   )
 
   return (
-    <div className='py-4 bg-[#241F36]' ref={props.position}>
+    <div className='px-4 py-8 bg-[#241F36]' ref={props.position}>
       {submitted ? Success : Form}
     </div>
   )

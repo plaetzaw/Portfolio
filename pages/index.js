@@ -33,14 +33,8 @@ export default function Home () {
   const technologiesRef = useRef(null)
   const contactRef = useRef(null)
 
-  // const scrollTo = (ref) => {
-  //   ref.current.scrollIntoView({ behavio r: 'smooth' })
-  // }
-
   const executeScroll = (ref) => {
-    console.log('check the ref', ref)
     ref.current.scrollIntoView()
-    // contactRef.current.scrollIntoView()
   }
 
   const refSet = {

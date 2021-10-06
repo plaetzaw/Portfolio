@@ -23,7 +23,7 @@ const AboutMe = (props) => {
 
   const QPanel = QArray.map((item, index) => {
     return (
-      <div key={index} className='flex-row p-6 px-4 py-6 min-text-left md:flex'>
+      <div key={index} className='flex-row py-4 min-text-left md:flex'>
         <p className='text-[#5F3C92] text-3xl md:w-1/2 text-4xl'>{item.Question}</p>
         <p className='text-[#241F36] text-xl md:w-1/2 text-2xl'>{item.Answer}</p>
       </div>
@@ -31,7 +31,7 @@ const AboutMe = (props) => {
     )
   })
   return (
-    <div className='bg-[#F2EFEF]' ref={props.position}>
+    <div className='bg-[#F2EFEF] px-8 py-8' ref={props.position}>
       {QPanel}
     </div>
   )

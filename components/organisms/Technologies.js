@@ -106,7 +106,7 @@ const Technologies = (props) => {
     )
   })
   return (
-    <div className='bg-[#707097]' ref={props.position}>
+    <div className='bg-[#707097] px-4 py-8' ref={props.position}>
       <h1 className='text-[#F2EFEF] py-4 text-4xl text-center'>My Technologies</h1>
       <div className='grid grid-cols-2 gap-6 px-6 py-8 md:grid-cols-3 lg:grid-cols-4'>
         {TechGrid}
