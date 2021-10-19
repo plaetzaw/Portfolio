@@ -16,7 +16,7 @@ const Navbar = (props) => {
         {props.isOpen ? <Close /> : <Hamburger />}
       </div>
       <div className={`${props.isOpen ? 'h-screen' : 'auto'} `}>
-        <ul className={`flex ${props.isOpen ? 'flex-col' : 'hidden'} items-center gap-1 text-center h-screen md:flex flex-row justify-evenly md:h-auto`}>
+        <ul className={`flex ${props.isOpen ? 'flex-col' : 'hidden'} items-center gap-1 text-center h-screen md:flex flex-row justify-evenly md:h-auto hover:cursor-pointer`}>
           <li className='hover:pointer text-4xl h-1/4 text-[#F2EFEF] md:text-xl py-2' onClick={() => closeMobileView(props.refSet.about)}>About</li>
           <li className='hover:pointer text-4xl h-1/4 text-[#F2EFEF] md:text-xl py-2' onClick={() => closeMobileView(props.refSet.projects)}>Projects</li>
           <li className='hover:pointer text-4xl h-1/4 text-[#F2EFEF] md:text-xl py-2' onClick={() => closeMobileView(props.refSet.technologies)}>Technologies</li>
