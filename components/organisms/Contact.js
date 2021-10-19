@@ -68,10 +68,10 @@ const Contact = (props) => {
         method='post'
         data-netlify='true'
         data-netlify-honeypot='bot-field'
-        className='flex flex-col items-center'
+        className='flex flex-col items-center justify-center'
       >
-        <span className='text-[#F2EFEF] py-4 text-4xl text-center'>Contact Me!</span>
-        <span className='text-[#F2EFEF]'>Name</span>{invalidName && <p className='text-red-600'>Please enter your name</p>}
+        <span className='text-[#F2EFEF] py-4 text-4xl'>Contact Me!</span>
+        <span className='text-[#F2EFEF] text-left py-2'>Name</span>{invalidName && <p className='text-red-600'>Please enter your name</p>}
         <input
           type='text'
           name='name'
@@ -79,9 +79,9 @@ const Contact = (props) => {
           invalidfield={invalidName.toString()}
           placeholder='Your name'
           onChange={(e) => { setName(e.target.value) }}
-          className={`border-8 w-4/5 my-2' ${invalidName ? 'border-red-700' : ''}`}
+          className={`border-8 w-2/3 md:w-1/2 my-2' ${invalidName ? 'border-red-700' : ''}`}
         />
-        <span className='text-[#F2EFEF]'>Email</span>{invalidEmail && <p className='text-red-600'>Please enter your email</p>}
+        <span className='text-[#F2EFEF] py-2'>Email</span>{invalidEmail && <p className='text-red-600'>Please enter your email</p>}
         <input
           type='text'
           name='email'
@@ -89,9 +89,9 @@ const Contact = (props) => {
           invalidfield={invalidEmail.toString()}
           placeholder='Your email'
           onChange={(e) => { setEmail(e.target.value) }}
-          className={`border-8 w-4/5 my-2' ${invalidEmail ? 'border-red-700' : ''}`}
+          className={`border-8 w-2/3 md:w-1/2 my-2' ${invalidEmail ? 'border-red-700' : ''}`}
         />
-        <span className='text-[#F2EFEF]'>Message</span>{invalidMessage && <p className='text-red-600'>Please enter your message</p>}
+        <span className='text-[#F2EFEF] py-2'>Message</span>{invalidMessage && <p className='text-red-600'>Please enter your message</p>}
         <textarea
           type='textarea'
           name='message'
@@ -99,9 +99,9 @@ const Contact = (props) => {
           invalidfield={invalidMessage.toString()}
           placeholder='Your message'
           onChange={(e) => { setMessage(e.target.value) }}
-          className={`border-8 w-4/5 my-2 py-4 ${invalidMessage ? 'border-red-700' : ''} `}
+          className={`border-8 w-2/3 md:w-1/2 my-2 py-4 ${invalidMessage ? 'border-red-700' : ''} `}
         />
-        <button className='bg-[#5F3C92] text-2xl w-1/4 border-4 rounded hover:bg-red-700 hover:border-white' onClick={onClick}>Send!</button>
+        <button className='bg-[#5F3C92] mt-4 text-2xl text-white w-1/5 border-4 rounded hover:bg-green-700 hover:border-white' onClick={onClick}>Send!</button>
       </form>
     </>
   )

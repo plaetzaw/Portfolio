@@ -3,6 +3,7 @@ import Check from '../atoms/Check'
 import Github from '../atoms/GitHub'
 import LinkedIn from '../atoms/LinkedIn'
 import Medium from '../atoms/Medium'
+// import Resume from '../../public/AlexPlaetzerResumeOfficial.pdf'
 
 const Hero = () => {
   const SMIcons = [{
@@ -47,6 +48,11 @@ const Hero = () => {
         <div className='flex flex-row'>
           {SMDisplay}
         </div>
+        {/* <div className='p-4'>
+          <a href={Resume} download='AlexPlaetzerResume' target='_blank' rel='noreferrer'>
+            <button className='h-20 p-3 text-2xl text-[#FF7A00] bg-purple-900 border-2 border-[#FF7A00] w-50 drop-shadow-2xl rounded-3xl hover:border-[#F2EFEF] hover:text-[#F2EFEF]'>Download Resume</button>
+          </a>
+        </div> */}
       </div>
 
     </div>

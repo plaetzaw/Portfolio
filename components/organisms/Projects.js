@@ -45,7 +45,7 @@ const Projects = (props) => {
             </div>
           </div>
         </div>
-        <div className='flex-col pr-6 md:w-2/3'>
+        <div className='flex-col pr-6 text-left md:w-2/3'>
           <span className='text-[#F2EFEF] m-2 text-3xl leading-10'>{project.title}</span>
           <p className='text-[#707097] m-2 text-2xl leading-10'>{project.description}</p>
         </div>
