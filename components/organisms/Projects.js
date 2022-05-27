@@ -5,6 +5,15 @@ import Website from '../atoms/Website'
 const Projects = (props) => {
   const ProjArray = [
     {
+      src: '/Masterball.png',
+      title: 'Pokedex',
+      description: 'Simple Pokedex showing all 898 pokemon, with some basic filtering options.',
+      website: 'https://pokedex-teambuilder.vercel.app/',
+      feURL: 'https://github.com/plaetzaw/Pokedex-Teambuilder',
+      beURL: null,
+      type: 'NextJS'
+    },
+    {
       src: '/PCGame 1.png',
       title: 'GameBargins',
       description: 'GameBargins is a NextJS App which allows a user to search for video game discounts and set-up price alerts. The app can search over 20 PC gaming stores to find you the best deals. This app is powered by the Cheapshark API',
@@ -21,7 +30,7 @@ const Projects = (props) => {
       feURL: 'https://github.com/plaetzaw/YourNextBinge-Client',
       beURL: 'https://github.com/plaetzaw/YourNextBinge-Server',
       type: 'CRA'
-    }
+    }, 
   ]
 
   const Navigate = (url) => {
@@ -29,6 +38,10 @@ const Projects = (props) => {
   }
 
   const ProjDisplay = ProjArray.map((project, index) => {
+    const ServerCheck = (project.beURL !== null) ?       
+  <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.beURL) }}><Github />
+    <span>Express</span>
+  </div> : null
     return (
       <div key={index} className='flex flex-col justify-center px-4 py-8 md:flex-row'>
         <div className='md:w-1/3'>
@@ -40,9 +53,7 @@ const Projects = (props) => {
             <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.feURL) }}><Github />
               <span>{project.type}</span>
             </div>
-            <div className='px-3 cursor-pointer hover:animate-bounce' onClick={() => { Navigate(project.beURL) }}><Github />
-              <span>Express</span>
-            </div>
+            {ServerCheck}
           </div>
         </div>
         <div className='flex-col pr-6 text-left md:w-2/3'>
