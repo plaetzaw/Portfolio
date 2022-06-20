@@ -5,9 +5,18 @@ import Website from '../atoms/Website'
 const Projects = (props) => {
   const ProjArray = [
     {
+      src: '/Todo.png',
+      title: 'Frontend Mentor Challenge',
+      description: 'This was a challenge for the frontend mentor platform. This was also a chance for me to start teaching myself how to use TypeScript.',
+      website: "https://todolist-typescript.vercel.app/",
+      feURL: 'https://github.com/plaetzaw/TodoList-Typescript',
+      beURL: null,
+      type: 'NextJS'
+    },
+    {
       src: '/Masterball.png',
       title: 'Pokedex',
-      description: 'Simple Pokedex showing all 898 pokemon, with some basic filtering options.',
+      description: 'Simple Pokedex showing all 898 pokemon, with some basic filtering options. This provided a chance to teach myself how to use SSG with NextJS.',
       website: 'https://pokedex-teambuilder.vercel.app/',
       feURL: 'https://github.com/plaetzaw/Pokedex-Teambuilder',
       beURL: null,
